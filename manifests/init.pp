@@ -9,7 +9,7 @@
 #   
 # @param [String] blank An example parameter
 
-class puppet5(
+class blank(
   String $blank = '',
 ) {
 
