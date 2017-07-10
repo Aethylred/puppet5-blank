@@ -33,26 +33,34 @@ This is an example parameter entry
 
 Puppet 5.x allows the use of an in-module data store in the `data` directory. Internal package variables can be set there without exposing them as paramters. These can be over-ridden in the Hiera data store on the host, on a Puppet server, or in a Puppet environment.
 
-# References
+# Attributions
 
-This module uses the skeleton `puppet5-blank`, a Puppet 5.x module template created by Aethylred that includes configuration for:
+## puppet5-blank
+This module was based on [puppet5-blank](https://github.com/Aethylred/puppet5-blank), a Puppet 5.x module template created by [Aethylred](https://github.com/Aethylred)
 
-- Example class for checking Puppet module OS compatibility
+# Blank
+
+This module uses the skeleton [puppet5-blank](https://github.com/Aethylred/puppet5-blank), a Puppet 5.x module template created by [Aethylred](https://github.com/Aethylred). Usage is simple, follow the [Unblank](#Unblank) checklist in the [To Do](#To Do) list, which pretty much consists of replacing *Author* with your name and *blank* with your module name.
+
+The `puppet5-blank` template includes configuration for:
+
+- Example class `blank::oscheck` for checking Puppet module OS compatibility
 - Travis-CI
--- rspec-puppet
---- Configured with `.rspec` file
--- rspec-puppet-facts to provide a all OS facts for testing
--- Code checks
---- Puppet syntax check
---- Puppet style checks using `puppet-lint`
---- Puppet module metadata checks using `metadata-json-lint`
---- Ruby syntax check
---- Check for Windows line endings (because Aethylred uses Windows for $work)
+  - rspec-puppet
+    - Configured with `.rspec` file
+  - rspec-puppet-facts to provide a all OS facts for testing
+  - Spec tests
+  - Code checks
+    - Puppet syntax check
+    - Puppet style checks using `puppet-lint`
+    - Puppet module metadata checks using `metadata-json-lint`
+    - Ruby syntax check
+    - Check for Windows line endings (because Aethylred uses Windows for $work)
 - Git configuration
--- Set up `.gitignore` for Puppet module development
--- Set up `.gitattributes` for Puppet module development
---- Line endings rules
---- Linguist definitions for GitHub/GitLab programming language analysis
+  - Set up `.gitignore` for Puppet module development
+  - Set up `.gitattributes` for Puppet module development
+    - Line endings rules
+    - Linguist definitions for GitHub/GitLab programming language analysis
 - Gemnasium to check Ruby Gem health
 - Coveralls to report testing coverage
 - Beaker acceptance testing (Work in Progress)
@@ -63,8 +71,33 @@ This module uses the skeleton `puppet5-blank`, a Puppet 5.x module template crea
 
 # To Do
 
-The following thinfs are still to be done:
+The following things are still to be done:
 
 ## Unblank
+- [ ] Edit `metadata.json`
+- [ ] Edit `.fixtures`
+- [ ] Edit `manifests/init.pp`
+- [ ] Edit `manifests/oscheck.pp`
+- [ ] Edit and rename `spec/classes/blank_spec.rb`
+- [ ] Edit and rename `spec/classes/blank_oscheck_spec.rb`
+- [ ] Edit `README.md`. Please leave the [Attributions](#Attributions) for  [puppet5-blank](https://github.com/Aethylred/puppet5-blank), otherwise rework it as best suits your project.
+- [ ] **DO THESE LAST**
+  - [ ] Delete `.git`
+  - [ ] Reinitialise the project with `git init`
+  - [ ] Do an initial commit
+  - [ ] Tag as version `0.1.0`
+  - [ ] Set a remote repository
+  - [ ] Push to a git repository
+  - [ ] Congratulations, you just shipped a module that does nothing, but has a syntax check, lint check, and test environment.
 
+## Get Started
 
+- [ ] Add a Code of Conduct
+- [ ] Add a `CONTRIBUTING.md` contribution guide
+- [ ] Fix badges in `README.md`
+  - [ ] Fix URI in Travis-CI badge
+  - [ ] Fix URI in Coveralls badge
+  - [ ] Fix Puppetforge URIs in Puppetforge badges
+- [ ] Write code
+- [ ] Commit changes
+- [ ] Push to a repository
