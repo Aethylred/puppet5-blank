@@ -35,7 +35,31 @@ Puppet 5.x allows the use of an in-module data store in the `data` directory. In
 
 # References
 
-This module uses the skeleton `puppet5-blank`
+This module uses the skeleton `puppet5-blank`, a Puppet 5.x module template created by Aethylred that includes configuration for:
+
+- Example class for checking Puppet module OS compatibility
+- Travis-CI
+-- rspec-puppet
+--- Configured with `.rspec` file
+-- rspec-puppet-facts to provide a all OS facts for testing
+-- Code checks
+--- Puppet syntax check
+--- Puppet style checks using `puppet-lint`
+--- Puppet module metadata checks using `metadata-json-lint`
+--- Ruby syntax check
+--- Check for Windows line endings (because Aethylred uses Windows for $work)
+- Git configuration
+-- Set up `.gitignore` for Puppet module development
+-- Set up `.gitattributes` for Puppet module development
+--- Line endings rules
+--- Linguist definitions for GitHub/GitLab programming language analysis
+- Gemnasium to check Ruby Gem health
+- Coveralls to report testing coverage
+- Beaker acceptance testing (Work in Progress)
+- Sample `README.md`
+- Starting `CHANGELOG.md`
+- Includes Apache 2.0 License
+- Badges!
 
 # To Do
 
