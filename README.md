@@ -55,6 +55,10 @@ The `puppet5-blank` template includes configuration for:
     - Puppet style checks using `puppet-lint`
     - Puppet module metadata checks using `metadata-json-lint`
     - Ruby syntax check
+    - validate YAML
+      - Check `hiera.yaml`
+      - Check `travis.yml`
+      - Check `hiera\` directory
     - Check for Windows line endings (because Aethylred uses Windows for $work)
 - Git configuration
   - Set up `.gitignore` for Puppet module development
